@@ -45,7 +45,7 @@ function makeSquares(sqrNum) {
 };
 
 function changeColor(gridSquares) { 
-    gridSquares.style.backgroundColor = 'red';
+    gridSquares.style.backgroundImage = 'linear-gradient(to right, red, darkred';
 };
 
 function removeLines(gridSquares) {
@@ -56,6 +56,6 @@ function removeLines(gridSquares) {
 
 function clear(gridSquares) {
     Array.from(gridSquares).forEach(function(gridSquares) {
-        gridSquares.style.backgroundColor = '';
+        gridSquares.style.backgroundImage = '';
     });
 };

@@ -57,4 +57,5 @@ button:hover {
     margin: 0;
     border-top: 1px solid white;
     border-left: 1px solid white;
+    border-radius: 5px;
 }
