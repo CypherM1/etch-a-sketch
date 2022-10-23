@@ -1,8 +1,11 @@
-const containerDiv = document.getElementById('container');
+const containerDiv = document.getElementById('sketchContainer');
+const clrBtn = document.getElementById('clear');
 let innerDivs = document.createDocumentFragment();
 let sqrNum = prompt('How many squares do you want?')
 let sqrWh = setWh(sqrNum);
-console.log(sqrWh);
+
+clrBtn.addEventListener('click', () => clear(widthHeight))
+
 
 for(var i=0; i < sqrNum; i++){
    var newDiv = document.createElement('div');
@@ -23,4 +26,17 @@ var widthHeight = document.getElementsByClassName('block');
 Array.from(widthHeight).forEach(function(widthHeight) {
     widthHeight.style.height = `${sqrWh}px`;
     widthHeight.style.width = `${sqrWh}px`;
+    widthHeight.addEventListener('mousedown', () => changeColor(widthHeight));
 });
+
+
+
+function changeColor(widthHeight) {
+    widthHeight.addEventListener('mouseover', widthHeight.style.backgroundColor = 'red');
+}
+
+function clear(widthHeight) {
+    Array.from(widthHeight).forEach(function(widthHeight) {
+        widthHeight.style.backgroundColor = '';
+    });
+}
