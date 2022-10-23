@@ -52,6 +52,7 @@ function removeLines(gridSquares) {
     Array.from(gridSquares).forEach(function(gridSquares) {
         gridSquares.style.border = '0px';
     });
+};
 
 function clear(gridSquares) {
     Array.from(gridSquares).forEach(function(gridSquares) {
