@@ -10,16 +10,21 @@ html {
 
 #container {
     margin: 0 auto;
-    height: 800px ;
-    width: 800px ;
+    height: 600px ;
+    width: 600px ;
     display: flex;
     flex-wrap: wrap;
-    border: 5px solid black;
+    gap: -1px;
     box-sizing:content-box;
+    border: 1px solid white;
 }
 
 .block {
-    width: calc(800px / 32);
-    height: calc(800px / 32);
-    border: 1px solid red;
+    margin: 0;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.block:active {
+    background-color: red;
 }
