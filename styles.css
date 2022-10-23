@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 50px;
+    background-color: black;
+}
+
+#container {
+    margin: 0 auto;
+    height: 800px ;
+    width: 800px ;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    box-sizing:content-box;
+}
+
+.block {
+    width: calc(800px / 32);
+    height: calc(800px / 32);
+    border: 1px solid red;
+}
