@@ -8,3 +8,5 @@ Seems like this is going to require a bunch of divs!
 Update: I wasnt able to figure everything out I wanted to do but it looks good.
 
 I might revisit to see if I can make it so you can re-add the grid lines and only draw while the mouse button is down.
+
+**** I finally figured out to make it so you only draw while the mouse button is down.****
