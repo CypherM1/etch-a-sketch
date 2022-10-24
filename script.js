@@ -12,6 +12,11 @@ const clrBtn = document.getElementById('clear');
 let gridSquares = document.getElementsByClassName('block');
 let innerDivs = document.createDocumentFragment();
 
+//variables to handle mouse down event condition
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
 
 //set events to all my buttons
 clrBtn.addEventListener('click', () => clear(gridSquares));
@@ -40,14 +45,19 @@ function makeSquares(sqrNum) {
     Array.from(gridSquares).forEach(function(gridSquares) {
         gridSquares.style.height = `${sqrWh}px`;
         gridSquares.style.width = `${sqrWh}px`;
-        gridSquares.addEventListener('mouseover', () => changeColor(gridSquares));
+        gridSquares.addEventListener('mouseover', changeColor);
+        gridSquares.addEventListener('mousedown', changeColor);
     });
-
+    console.log(gridSquares);
 };
 
 
-function changeColor(gridSquares) { 
-    gridSquares.style.backgroundImage = 'linear-gradient(to right, red, darkred';
+function changeColor(e) {
+    if (e.type === 'mouseover' && !mouseDown) {
+        return;
+    } else {
+        e.target.style.backgroundImage = 'linear-gradient(to right, red, darkred)';
+    }; 
 };
 
 //removes grid lines
